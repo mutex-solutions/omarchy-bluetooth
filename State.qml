@@ -59,7 +59,11 @@ Item {
   }
 
   function setScanning(on) {
-    if (adapter && adapter.enabled) adapter.discovering = !!on
+    if (!adapter || !adapter.enabled) return
+    // Only write on a real change: BlueZ answers a redundant start with
+    // "Operation already in progress", which Quickshell logs as a warning.
+    if (on && !adapter.discovering) adapter.discovering = true
+    else if (!on && adapter.discovering) adapter.discovering = false
   }
 
   function deviceLabel(d) {

@@ -218,7 +218,9 @@ Item {
 
         Caps {
           width: parent.width
-          text: page.state && page.state.active ? "BLUETOOTH" : "DISABLED"
+          text: !page.state || !page.state.active
+            ? "DISABLED"
+            : (page.state.connected ? "CONNECTED" : "NOT CONNECTED")
         }
       }
     }
