@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.1
+
+- Connecting a device now routes audio to it, as the stock Bluetooth panel
+  does: the matching PipeWire sink is found by BlueZ address or device name,
+  retried for a moment while the link comes up, then made the default through
+  `omarchy-audio-output-set-default`. The sink matching follows the stock
+  panel's properties list, so renamed and vendor-named sinks still match.
+
 ## 0.1.0
 
 First release.
