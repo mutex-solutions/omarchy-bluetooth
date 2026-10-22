@@ -16,7 +16,7 @@ Item {
   readonly property var adapter: Bluetooth.defaultAdapter
   readonly property bool active: !!adapter && adapter.enabled
   readonly property string label: "Bluetooth"
-  readonly property string icon: "ᛒ"
+  readonly property string icon: "󰂯"
 
   readonly property var devices: {
     var src = Bluetooth.devices ? Bluetooth.devices.values : []

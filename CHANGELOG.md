@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2
+
+- The tile glyph is a Material icon, matching the other Deck tiles.
+
 ## 0.1.1
 
 - Connecting a device now routes audio to it, as the stock Bluetooth panel
